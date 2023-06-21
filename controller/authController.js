@@ -110,3 +110,16 @@ export const logincontroller = async (req, res) => {
     });
   }
 };
+
+// test route
+
+export const testcontroller = (req, res) => {
+  try {
+    res.status(200).send({
+      success: true,
+      message: "login succesfully",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
