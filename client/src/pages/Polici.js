@@ -4,7 +4,9 @@ import Layout from "../component/Layout/Layout";
 const Polici = () => {
   return (
     <Layout>
-      <div>Polici</div>
+      <div>
+        <h1>once item place cant not be refund back</h1>
+      </div>
     </Layout>
   );
 };
