@@ -7,19 +7,19 @@ export const registercontroller = async (req, res) => {
     const { name, email, password, phone, address } = req.body;
     // validations
     if (!name) {
-      return res.send({ error: "pagal is required" });
+      return res.send({ message: "pagal is required" });
     }
     if (!email) {
-      return res.send({ error: "email is required" });
+      return res.send({ message: "email is required" });
     }
     if (!password) {
-      return res.send({ error: "password is required" });
+      return res.send({ message: "password is required" });
     }
     if (!phone) {
-      return res.send({ error: "phone is required" });
+      return res.send({ message: "phone is required" });
     }
     if (!address) {
-      return res.send({ error: "address is required" });
+      return res.send({ message: "address is required" });
     }
 
     //check user
@@ -28,7 +28,7 @@ export const registercontroller = async (req, res) => {
     //exiting user
     if (exitingUser) {
       return res.status(200).send({
-        success: true.valueOf,
+        success: false,
         message: "Already register user",
       });
     }
