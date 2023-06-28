@@ -3,6 +3,7 @@ import Layout from "../../component/Layout/Layout";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
+
 const Register = () => {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");

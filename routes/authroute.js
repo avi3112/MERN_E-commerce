@@ -15,4 +15,9 @@ const router = express.Router();
 router.post("/register", registercontroller);
 router.post("/login", logincontroller);
 router.get("/test", requireSignIN, isAdmin, testcontroller);
+
+// protechted route
+router.get('/user-auth',requireSignIN,(req,res)=>{
+  res.status(200).send({ok:true})
+})
 export default router;
